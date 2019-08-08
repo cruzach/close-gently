@@ -1,0 +1,54 @@
+{
+  "name": "closer",
+  "version": "1.0.0",
+  "description": "Closes issues if they've had X label for Y days with no activity.",
+  "author": "Charlie Cruzan <charliecruzan@gmail.com>",
+  "license": "ISC",
+  "repository": "https://github.com//closer.git",
+  "homepage": "https://github.com//closer",
+  "bugs": "https://github.com//closer/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./src/index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.1.0",
+    "probot": "^7.2.0",
+    "probot-messages": "^1.0.1",
+    "probot-scheduler": "^2.0.0-beta.1",
+    "uuidv4": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
