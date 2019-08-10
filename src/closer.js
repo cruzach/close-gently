@@ -71,8 +71,6 @@ module.exports = class Closer {
 
       this.log.info({ issue }, "Closing...");
       await this.context.github.issues.update({ ...issue, state: "closed" });
-
-      this.log.info({ issue }, "Finished!");
     }
   }
 
@@ -107,6 +105,7 @@ module.exports = class Closer {
   }
 
   format_YYYYMMDD(date) {
+    console.log("\n\n\n" + date.toISOString().split("T")[0]);
     return date.toISOString().split("T")[0];
   }
 };

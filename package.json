@@ -4,9 +4,9 @@
   "description": "Closes issues if they've had X label for Y days with no activity.",
   "author": "Charlie Cruzan <charliecruzan@gmail.com>",
   "license": "ISC",
-  "repository": "https://github.com//closer.git",
-  "homepage": "https://github.com//closer",
-  "bugs": "https://github.com//closer/issues",
+  "repository": "https://github.com/cruzach/close-gently",
+  "homepage": "https://github.com/cruzach/close-gently",
+  "bugs": "https://github.com/cruzach/close-gently/issues",
   "keywords": [
     "probot",
     "github",
@@ -16,7 +16,7 @@
     "dev": "nodemon",
     "start": "probot run ./src/index.js",
     "lint": "standard --fix",
-    "test": "jest && standard",
+    "test": "jest",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
