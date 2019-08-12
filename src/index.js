@@ -13,7 +13,7 @@ const schema = require("./schema");
 module.exports = async robot => {
   const github = await robot.auth();
   const appName = (await github.apps.getAuthenticated()).data.name;
-  createScheduler(robot, { delay: true, interval: 24 * 60 * 60 * 1000 });
+  createScheduler(robot, { delay: false, interval: 60 * 1000 });
 
   robot.on("schedule.repository", async context => {
     const app = await startUp(context);
